@@ -2,27 +2,35 @@ $(document).ready(function(){
 
     $("#currentDay").text(moment().format("MMMM Do YY, H:mm a"))
 
-    let timeId = parseInt($(this).attr("id").split("-")[1])
+    let timeId = $(".hour").each(function(i){
+        $(this).attr("value")
 
-    console.log(timeId)
+       
+
+    })
+
+    
+    
+
+    
 
    $(".row").each(function(index){
     
-    let currentTime = moment().format("H:mm a")
+    let currentTime = moment().format("H:mm a") 
 
-    if (currentTime === timeId){
-        $(this).addClass(".past")
+    if(timeId === currentTime) {
+        $(this).addClass(".present")
     }
+   
 
-    
+    console.log(timeId)
 
 
    })
 
     
 
-   
-
+  
  
 
 })
